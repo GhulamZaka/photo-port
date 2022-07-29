@@ -68,11 +68,12 @@ function ContactForm() {
             onBlur={handleChange}
           />
         </div>
-        {errorMessage && (
+        if(errorMessage){" "}
+        {
           <div>
             <p className="error-text">{errorMessage}</p>
           </div>
-        )}
+        }
         <button data-testid="button" type="submit">
           Submit
         </button>
